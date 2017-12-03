@@ -99,6 +99,8 @@ public class Rotor_Landing_Gear {
 			}
 
 			if(any_locked) {
+				if(already_locked) continue;
+
 				if(timer.CustomName.ToLower().Contains("lock:start") && !timer.CustomName.ToLower().Contains("unlock:start")) {
 					timer.StartCountdown();
 				}
